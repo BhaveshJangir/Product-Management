@@ -1,0 +1,49 @@
+
+
+<!-- @for(item of ak;track $index){
+    <p>{{item}}</p>
+} -->
+
+<!-- @for(item of ak;track $index){
+    <mat-card class="example-card m-10 h-auto w-auto">
+       
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-actions>
+          <button mat-button>some thing</button>
+          <button mat-button class="ml-2">hii</button>
+        </mat-card-actions>
+      </mat-card>
+} -->
+
+<!-- <h1>{{pk}} data to set {{pd}}</h1>
+
+@for(item of pk;track $index){
+    <mat-card class="example-card m-10 h-auto w-auto">
+       
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-actions>
+          <button mat-button>price {{item.views}}</button>
+          <button mat-button class="ml-2"><s>5000</s></button>
+        </mat-card-actions>
+        <div id = "bt" class="flex justify-center">
+            <button mdc-button__label class=" mdc-button mdc-button--raised mat-mdc-raised-button mat-primary mat-mdc-button-base ml-2 " (click)="view()">view</button>      
+        </div>
+      </mat-card> 
+} -->
+
+@for(item of pd;track $index){
+    <mat-card class="example-card  m-10 h-auto w-auto">
+     
+      <img mat-card-image class="h-80" src="{{item.thumbnail}}" alt="Photo of a Shiba Inu">
+      <mat-card-actions>
+        <h1 class="fill-slate-200">{{item.title}}</h1>
+        <br>
+        <button mat-button>price {{item.id}}</button>
+        <button mat-button class="ml-2"><s>5000</s></button>
+      </mat-card-actions>
+      <div id = "bt" class="flex justify-center">
+          <button mdc-button__label class=" mdc-button mdc-button--raised mat-mdc-raised-button mat-primary mat-mdc-button-base ml-2 " (click)="gotoProduct(item.id)">view</button>      
+      </div>
+    </mat-card> 
+  
+}

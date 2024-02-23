@@ -1,0 +1,22 @@
+<p>home works!</p>
+@if (type == 1){
+    <h1>hello 1</h1>
+}
+@else{
+    <h1>hello 2</h1>
+}<form class="w-full max-w-sm block"  name="myform">
+    <div class="flex items-center border-b border-teal-500 py-2 m-10 " >
+    <input [(ngModel)] = "text" (change)="getText($event)" class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" name="inp" placeholder="Jane Doe" aria-label="Full name">
+      <button (click)="getInput()" id="sign_up"  class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
+        Sign Up
+      </button>
+      <button class="flex-shrink-0 border-transparent border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="button">
+        Cancel
+      </button>
+    </div>
+  </form>
+<h1>{{lis}} say hii {{p?.id}}</h1>
+<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded" (click)="gotoProduct(p?.id)"> Submit </button>
+<app-card class="flex flex-wrap" [pk]="lis" [pd] = "p" (data)="getData($event)"></app-card>
+
+
