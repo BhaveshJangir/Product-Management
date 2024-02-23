@@ -2,16 +2,17 @@ import { Component, inject } from '@angular/core';
 import { CardComponent } from '../card/card.component';
 import { ProductService } from '../../product.service';
 import { Product } from '../../../../type/post';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from "../header/header.component";
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [CardComponent,MatButtonModule, FormsModule],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+    selector: 'app-home',
+    standalone: true,
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss',
+    imports: [CardComponent, MatButtonModule, FormsModule, HeaderComponent, RouterLink]
 })
 export class HomeComponent {
 //   this.lis=this.ps.lip

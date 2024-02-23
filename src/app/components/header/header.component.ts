@@ -25,8 +25,6 @@ import {MatButtonModule} from '@angular/material/button';
     <mat-icon>share</mat-icon>
   </button>
 </mat-toolbar>
-  
-
   `,
   styles: `
   .example-spacer {

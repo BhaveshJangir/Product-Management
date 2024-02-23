@@ -36,9 +36,10 @@
      
       <img mat-card-image class="h-80" src="{{item.thumbnail}}" alt="Photo of a Shiba Inu">
       <mat-card-actions>
-        <h1 class="fill-slate-200">{{item.title}}</h1>
+        <h1 class="fill-slate-200">{{item.title | uppercase}}</h1>
         <br>
-        <button mat-button>price {{item.id}}</button>
+        <hr>
+        <div >{{item.price | rupee}}</div>
         <button mat-button class="ml-2"><s>5000</s></button>
       </mat-card-actions>
       <div id = "bt" class="flex justify-center">

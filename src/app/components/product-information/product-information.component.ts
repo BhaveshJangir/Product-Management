@@ -1,11 +1,11 @@
 import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
 import { ProductService } from '../../product.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-product-information',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './product-information.component.html',
   styleUrl: './product-information.component.scss'
 })

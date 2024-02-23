@@ -2,12 +2,14 @@ import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
 import { ProductService } from '../../product.service';
 import { Router } from '@angular/router';
+import { UpperCasePipe } from '@angular/common';
+import { RupeePipe } from '../../rupee.pipe';
 
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [MatCardModule],
+  imports: [MatCardModule,UpperCasePipe,RupeePipe],
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss'
 })
